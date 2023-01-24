@@ -33,6 +33,8 @@ I approached the problem by first understanding the requirements and acceptance 
 
 I structured my code using object-oriented design principles. I started with the Bank class as this felt like an appropriate container for the eventual accounts. This has methods for creating and deleting. I then test-drove the account class which allow a user to deposit, withdraw and print a statement. Each deposit and withdrawal is an instance of the transaction class, so this felt the best place to test-drive next. Then, finally, the statement class which formats and prints the transaction history held in the account class.
 
+After feedback some of the features from the original plan were removed and testng for behaviour was improved.
+
 ### Testing
 The application has 100% test coverage through unit testing. This required mocking for the classes with dependencies, as well testing on the terminal output.
 
