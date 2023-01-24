@@ -18,6 +18,7 @@ class Statement
   end
 
   def print
+    raise 'No account transactions' if @transactions.length == 0
     @io.puts @header
     format_for_printing.each { |statement_line| @io.puts statement_line }
   end
