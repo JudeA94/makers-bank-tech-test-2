@@ -2,6 +2,7 @@ class Statement
   def initialize(transaction_history, io)
     @io = io
     @transactions = transaction_history
+    @header = 'date || credit || debit || balance'
   end
 
   attr_reader :transactions
@@ -17,7 +18,7 @@ class Statement
   end
 
   def print
-    @io.puts 'date || credit || debit || balance'
+    @io.puts @header
     format_for_printing.each { |statement_line| @io.puts statement_line }
   end
 end

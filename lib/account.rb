@@ -2,15 +2,12 @@ require_relative 'transaction'
 require_relative 'statement'
 
 class Account
-  def initialize(name, sort_code, account_number)
-    @name = name
-    @sort_code = sort_code
-    @account_number = account_number
+  def initialize
     @balance = 0
     @transaction_history = []
   end
 
-  attr_reader :balance, :transaction_history, :name, :sort_code, :account_number
+  attr_reader :transaction_history, :balance
 
   def deposit(amount)
     @balance += amount
